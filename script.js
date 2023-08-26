@@ -87,7 +87,7 @@ function addTodo(event) {
     name: event.target.todo.value,
     isDone: false,
   };
-  todos.unshift(newTodo);
+  if (event.target.todo.value.trim() !== "") todos.unshift(newTodo);
   // add new todo to todos
   event.target.todo.value = "";
   // clear input value
